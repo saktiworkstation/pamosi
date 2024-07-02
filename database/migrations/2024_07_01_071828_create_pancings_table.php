@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('pancings', function (Blueprint $table) {
             $table->id();
+            $table->string('nama', 100);
+            $table->string('alamat', 255)->nullable();
+            $table->string('no_telepon', 15)->nullable();
+            $table->string('email', 100)->nullable();
+            $table->date('tanggal_daftar');
             $table->timestamps();
         });
     }
