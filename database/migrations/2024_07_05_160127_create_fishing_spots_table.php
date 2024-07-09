@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('fishing_spots', function (Blueprint $table) {
             $table->id();
+            $table->string('name', 100);
+            $table->string('location', 255);
+            $table->decimal('price_per_hour', 10, 2);
             $table->timestamps();
         });
     }
